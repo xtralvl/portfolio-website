@@ -66,6 +66,40 @@ body {
     transition: .3s;
 }
 
+.navbar button {
+    font-size: 1.7rem;
+    background: #00abf0;
+    color: var(--text-color);
+    font-weight: 500;
+    margin-left: 3.5rem;
+    transition: .3s;
+    position: relative;
+    width: auto;
+    height: 100%;
+    border: .2rem solid var(--main-color);
+    border-radius: .8rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    z-index: 1;
+    overflow: hidden;
+    padding: 1rem;
+
+    &:hover {
+        background-color: white;
+        color: var(--main-color);
+        border: .2rem solid white;
+    }
+
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    }
+
+}
+
 .navbar a:hover,
 .navbar a.active {
     color: var(--main-color);
@@ -271,13 +305,8 @@ color: var(--main-color);
     transition: 2s;
     pointer-events: none;
     background: var(--bg-color);
-    opacity: .6;
+    opacity: .5;
 
-}
-
-.home-imgHover:hover {
-    background-color: var(--bg-color);
-    opacity: .8;
 }
 
 .about {
