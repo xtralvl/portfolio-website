@@ -604,6 +604,28 @@ span {
     width: 70%;
 }
 
+.icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+
+    .icon {
+        width: 4rem;
+    }
+    
+}
+
+// === PROJECTS SECTION STYLES === //
+
+.projects {
+    .heading {
+        border: 1px solid red;
+        text-align: left;
+    }
+}
+
 .contact {
     min-height: auto;
     padding-bottom: 7rem;
