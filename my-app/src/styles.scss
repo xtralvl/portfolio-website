@@ -431,8 +431,7 @@ span {
     margin-left: .5rem;
 }
 
-.education-column .education-box,
-.projects-column .projects-box {
+.education-column .education-box {
     border-left: .2rem solid var(--main-color);
 }
 
@@ -443,8 +442,10 @@ span {
     padding-left: 0.5rem;
 }
 
-.education-box .education-content::before,
-.projects-column::before{
+.projects-column {
+    text-align: center;
+}
+.education-box .education-content::before {
     content: '';
     position: absolute;
     top: 0;
@@ -467,8 +468,7 @@ span {
     overflow: hidden;
 }
 
-.education-content .content::before,
-.projects-column::before {
+.education-content .content::before {
     content: '';
     position: absolute;
     top: 0;
@@ -480,8 +480,7 @@ span {
     transition: .5s;
 }
 
-.education-content .content:hover::before,
-.projects-content .content:hover::before {
+.education-content .content:hover::before {
     width: 100%;
 }
 
@@ -507,6 +506,8 @@ span {
     display: flex;
     align-items: center;
     margin-left: 0.5rem;
+    flex-wrap: wrap;
+    max-width: 100%;
 
 }
 
@@ -549,11 +550,14 @@ span {
 .project-title {
     font-size: 1.8rem;
     margin-left: .5rem;
+    text-align: left;
 }
 
 .project-description {
     font-size: 1.5rem;
     margin-left: .5rem;
+    padding-right: 1rem;
+    text-align: left;
 
 }
 
@@ -568,22 +572,14 @@ span {
     font-size: 1.6rem;
     padding-top: .5rem;
 }
-.iframe-wrapper {
-    width: 100%;
-    overflow: hidden;
-  }
-  
-  .iframe-wrapper iframe {
-    width: 1200px;   /* force desktop width */
-    height: 800px;   /* adjust as needed */
-    border: 0;
-  }
     
-#digital-banking-app {
-    width: 100%;
-    height: 30rem;
-    margin-top: 2rem;
-    margin-left: 0;
+.projects-content {
+    img {
+        width: 80%;
+        border-radius: 10px;
+        margin-top: 2rem;
+        height: 22rem;
+    }
 }
 
 .skills {
@@ -675,13 +671,9 @@ span {
     width: 60%;
 }
 .skills-column:nth-child(1) .skills-content .progress:nth-child(4) .bar span {
-    width: 10%;
+    width: 65%;
 }
 .skills-column:nth-child(1) .skills-content .progress:nth-child(5) .bar span {
-    width: 75%;
-}
-
-.skills-column:nth-child(1) .skills-content .progress:nth-child(6) .bar span {
     width: 60%;
 }
 
