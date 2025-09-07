@@ -399,7 +399,8 @@ span {
 
 }
 
-.education {
+.education,
+.projects {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -408,13 +409,15 @@ span {
     padding-bottom: 5rem;
 }
 
-.education .education-row {
+.education .education-row,
+.projects .projects-row {
     display: flex;
     flex-wrap: wrap;
     gap: 5rem;
 }
 
-.education-row .education-column {
+.education-row .education-column,
+.projects-row .projects-column {
     flex: 1 1 40rem;
 }
 
@@ -423,16 +426,25 @@ span {
     margin: 0 0 1.5rem 2rem;
 }
 
-.education-column .education-box {
+.projects-column .title {
+    font-size: 2.5rem;
+    margin-left: .5rem;
+}
+
+.education-column .education-box,
+.projects-column .projects-box {
     border-left: .2rem solid var(--main-color);
 }
 
-.education-box .education-content {
+.education-box .education-content,
+.projects-box .projects-content,
+.projects-column {
     position: relative;
-    padding-left: 2rem;
+    padding-left: 0.5rem;
 }
 
-.education-box .education-content::before {
+.education-box .education-content::before,
+.projects-column::before{
     content: '';
     position: absolute;
     top: 0;
@@ -444,7 +456,9 @@ span {
 }
 
 
-.education-content .content {
+.education-content .content,
+.projects-content .content,
+.projects-column {
     position: relative;
     padding: 1.5rem;
     border: .2rem solid var(--main-color);
@@ -453,7 +467,8 @@ span {
     overflow: hidden;
 }
 
-.education-content .content::before {
+.education-content .content::before,
+.projects-column::before {
     content: '';
     position: absolute;
     top: 0;
@@ -465,28 +480,110 @@ span {
     transition: .5s;
 }
 
-.education-content .content:hover::before {
+.education-content .content:hover::before,
+.projects-content .content:hover::before {
     width: 100%;
 }
 
-.education-content .content .year {
+.education-content .content .year,
+.projects-content .content .year {
     font-size: 1.5rem;
     color: var(--main-color);
     padding-bottom: .5rem;
 }
 
-.education-content .content .year i {
+.education-content .content .year i,
+.projects-content .content .year i {
     padding-right: .5rem;
+}
+
+.live-site,
+.code,
+.technologies {
+    display: flex;
+    gap: .5rem;
+    padding: 0;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    margin-left: 0.5rem;
 
 }
 
-.education-content .content h3 {
+.live-site i {
+    font-size: 1.9rem;
+    color: var(--main-color);
+}
+
+.code i {
+    font-size: 1.6rem;
+    color: var(--main-color);
+}
+
+.technologies {
+    font-size: 1.4rem;
+    color: var(--main-color);
+}
+
+.technologies i {
+    font-size: 1.4rem;
+    color: var(--main-color);
+}
+
+.live-site a {
+    cursor: pointer;
+    font-size: 1.9rem;
+    text-decoration: underline;
+    color: var(--main-color);
+}
+
+.code a {
+    cursor: pointer;
+    font-size: 1.6rem;
+    text-decoration: underline;
+    color: var(--main-color);
+    
+ 
+}
+
+.project-title {
+    font-size: 1.8rem;
+    margin-left: .5rem;
+}
+
+.project-description {
+    font-size: 1.5rem;
+    margin-left: .5rem;
+
+}
+
+
+.education-content .content h3 ,
+.projects-content .content h3{
     font-size: 2rem;
 }
 
-.education-content .content p {
+.education-content .content p,
+.projects-content .content p {
     font-size: 1.6rem;
     padding-top: .5rem;
+}
+.iframe-wrapper {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .iframe-wrapper iframe {
+    width: 1200px;   /* force desktop width */
+    height: 800px;   /* adjust as needed */
+    border: 0;
+  }
+    
+#digital-banking-app {
+    width: 100%;
+    height: 30rem;
+    margin-top: 2rem;
+    margin-left: 0;
 }
 
 .skills {
@@ -503,6 +600,7 @@ span {
 
 .skills-row .skills-column {
     flex: 1 1 40rem;
+    max-width: 100%;
 }
 
 .skills-column .title {
@@ -577,11 +675,16 @@ span {
     width: 60%;
 }
 .skills-column:nth-child(1) .skills-content .progress:nth-child(4) .bar span {
-    width: 70%;
+    width: 10%;
 }
 .skills-column:nth-child(1) .skills-content .progress:nth-child(5) .bar span {
+    width: 75%;
+}
+
+.skills-column:nth-child(1) .skills-content .progress:nth-child(6) .bar span {
     width: 60%;
 }
+
 
 
 .skills-column:nth-child(2) .skills-content .progress:nth-child(1) .bar span {
@@ -605,11 +708,14 @@ span {
 }
 
 .icon-container {
+    opacity: .5;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1rem;
     margin-top: 2rem;
+    max-width: 100%;
+    flex-wrap: wrap;
 
     .icon {
         width: 4rem;
@@ -619,12 +725,7 @@ span {
 
 // === PROJECTS SECTION STYLES === //
 
-.projects {
-    .heading {
-        border: 1px solid red;
-        text-align: left;
-    }
-}
+
 
 .contact {
     min-height: auto;
