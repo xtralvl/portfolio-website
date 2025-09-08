@@ -399,6 +399,10 @@ span {
 
 }
 
+#project {
+    border-bottom: 1px solid rgb(255, 255, 255, 0.2);
+}
+
 .education,
 .projects {
     display: flex;
@@ -439,11 +443,38 @@ span {
 .projects-box .projects-content,
 .projects-column {
     position: relative;
-    padding-left: 0.5rem;
+    padding-left: 1.5rem;
 }
 
 .projects-column {
-    text-align: center;
+    text-align: left;
+    position: relative;
+    padding: 1.5rem;
+    border-radius: .6rem;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    border: .2rem solid transparent; // kezdetben átlátszó border
+    transition: border 0.5s ease;
+
+    i a:hover {
+        color: white;
+    }
+
+    img {
+        border-radius: 10px;
+        margin-top: 2rem;
+        opacity: 0.5;
+        transition: opacity 0.5s ease; // smooth átmenet
+        
+    }
+
+    &:hover {
+        border-color: var(--main-color); // border változás
+
+        img {
+            opacity: 1; // kép opacity-je is változik
+        }
+    }
 }
 .education-box .education-content::before {
     content: '';
@@ -458,14 +489,27 @@ span {
 
 
 .education-content .content,
-.projects-content .content,
-.projects-column {
+.projects-content .content {
     position: relative;
     padding: 1.5rem;
     border: .2rem solid var(--main-color);
     border-radius: .6rem;
     margin-bottom: 2rem;
     overflow: hidden;
+}
+
+.projects-column {
+    position: relative;
+    padding: 1.5rem;
+    border-radius: .6rem;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    border: .2rem solid transparent; // kezdetben átlátszó border
+    transition: border 0.5s ease;     // smooth transition
+}
+
+.projects-column:hover {
+    border-color: var(--main-color); // csak a border szín változik    transition: 1s;
 }
 
 .education-content .content::before {
@@ -498,7 +542,7 @@ span {
 
 .live-site,
 .code,
-.technologies {
+.case-study {
     display: flex;
     gap: .5rem;
     padding: 0;
@@ -521,13 +565,8 @@ span {
     color: var(--main-color);
 }
 
-.technologies {
-    font-size: 1.4rem;
-    color: var(--main-color);
-}
-
-.technologies i {
-    font-size: 1.4rem;
+.case-study i {
+    font-size: 1.9rem;
     color: var(--main-color);
 }
 
@@ -543,9 +582,24 @@ span {
     font-size: 1.6rem;
     text-decoration: underline;
     color: var(--main-color);
-    
- 
 }
+
+.case-study a {
+    cursor: pointer;
+    font-size: 1.6rem;
+    text-decoration: underline;
+    color: var(--main-color);
+}
+
+.live-site a,
+.code a,
+.case-study a  {
+    &:hover {
+        color: white;
+    }
+}
+
+
 
 .project-title {
     font-size: 1.8rem;
@@ -575,10 +629,11 @@ span {
     
 .projects-content {
     img {
-        width: 80%;
+        width: 70%;
         border-radius: 10px;
         margin-top: 2rem;
-        height: 22rem;
+        height: auto;
+        
     }
 }
 
