@@ -612,6 +612,7 @@ span {
     margin-left: .5rem;
     padding-right: 1rem;
     text-align: left;
+    margin-top: 2rem;
 
 }
 
@@ -628,11 +629,16 @@ span {
 }
     
 .projects-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     img {
-        width: 70%;
+        width: 80%;
         border-radius: 10px;
         margin-top: 2rem;
         height: auto;
+        
         
     }
 }
