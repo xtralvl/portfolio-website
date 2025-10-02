@@ -84,3 +84,10 @@ window.addEventListener('scroll', () => {
         closeMenu();
     }
 });
+
+const gmailBtn = document.getElementById('gmail');
+const gmailText = document.getElementById('gmail-text');
+
+gmailBtn!.addEventListener('click', () => {
+  gmailText!.classList.toggle('show');
+});
