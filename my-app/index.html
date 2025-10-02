@@ -24,8 +24,17 @@
       <a href="#education">Education</a>
       <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
-      <button><a href="" class="download-cv btn"></a>Download my CV</button>
+      <button id="download-cv" class="btn">Download my CV</button>
 
+      <script>
+        document.getElementById("download-cv").addEventListener("click", () => {
+          const link = document.createElement("a");
+          link.href = "./public/ROLAND_SZUCS_CV.pdf"; // path to your CV inside public/
+          link.download = "Roland_Szucs_CV.pdf"; // filename when downloaded
+          link.click();
+        });
+      </script>
+            
       <span class="active-nav"></span>
       <span class="animate" style="--i:2;"></span>
     </nav>
