@@ -7,7 +7,6 @@
     border: none;
     scroll-behavior: smooth !important;
     font-family: 'Poppins', sans-serif;
-    max-width: 100% !important;
 
 }
 :root {
@@ -79,7 +78,6 @@ body {
   
 .navbar {
     position: relative;
-    max-width: 100% !important;
 
 }
 
@@ -151,6 +149,8 @@ section {
     background: url('/desktop-pic-bigger.png') no-repeat;
     background-size: cover;
     background-position: center;
+    margin: 0 4rem;
+
 }
 
 .home-content {
@@ -396,7 +396,7 @@ span {
 
 .about-content p {
     font-size: 1.6rem;
-    margin: 2rem 0 3rem;
+    margin: 2rem 15rem;
 }
 
 .btn-box.btns {
