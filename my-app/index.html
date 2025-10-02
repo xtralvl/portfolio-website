@@ -24,17 +24,17 @@
       <a href="#education">Education</a>
       <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
-      <button id="download-cv" class="btn">Download my CV</button>
+      <button id="cv-btn">View my CV</button>
 
       <script>
-        document.getElementById("download-cv").addEventListener("click", () => {
-          const link = document.createElement("a");
-          link.href = "./public/ROLAND_SZUCS_CV.pdf"; // path to your CV inside public/
-          link.download = "Roland_Szucs_CV.pdf"; // filename when downloaded
-          link.click();
+        document.getElementById("cv-btn").addEventListener("click", () => {
+          window.open(
+            "https://www.canva.com/design/DAG0oHjE7xM/wXX2D2kxzZaxI4m79-uvnQ/view",
+            "_blank"
+          );
         });
       </script>
-            
+      
       <span class="active-nav"></span>
       <span class="animate" style="--i:2;"></span>
     </nav>
